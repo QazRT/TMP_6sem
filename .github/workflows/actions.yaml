@@ -19,7 +19,7 @@ jobs:
           .\venv\Scripts\activate
       - name: librares
         run: |
-          pip install -r requirement.txt
+          pip install -r requirements.txt
       - name: tested
         run: |
           pytest
