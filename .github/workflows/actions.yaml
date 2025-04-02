@@ -1,7 +1,7 @@
 name: test-actions
 on:
   push:
-    branches: ["master"]
+    branches: ["pr2-3"]
 
 jobs:
   build-test:
