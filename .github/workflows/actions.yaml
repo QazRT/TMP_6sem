@@ -1,0 +1,25 @@
+﻿name: test-actions
+on:
+  push:
+    branches: ["docker"]
+
+jobs:
+  build-test:
+    runs-on: windows-latest
+    steps:
+      - name: Set up Python
+        uses: actions/checkout@v4
+      - name: Set Up 2
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.13'
+      - name: Setup python environment
+        run: |
+          python3 -m venv venv
+          .\venv\Scripts\activate
+      - name: librares
+        run: |
+          pip install -r requirements.txt
+      - name: tested
+        run: |
+          pytest
