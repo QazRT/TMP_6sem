@@ -22,4 +22,4 @@ jobs:
           pip install -r requirements.txt
       - name: tested
         run: |
-          cd fastapi_app && pytest
+          cd fastapi_app | pytest
